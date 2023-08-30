@@ -3,7 +3,7 @@ package controller;
 import model.Aluno;
 
 import java.util.*;
-//teste
+
 public class AlunoController {
     public static void main(String [] args){
         Aluno aluno1 = new Aluno();
