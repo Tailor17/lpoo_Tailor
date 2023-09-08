@@ -1,6 +1,6 @@
 package model;
 
-public class Conta {
+public abstract class Conta {
     protected double saldo;
 
     public double getSaldo() {
@@ -10,11 +10,27 @@ public class Conta {
         this.saldo  += valor;
     }
     public void  saca(double valor){
-        System.out.println("saca");
+        double saldoAtual = this.saldo-valor;
+        if(saldoAtual > 0){
         this.saldo  -= valor;
+        }else{
+            System.out.println("Não foi possivel realizar o saque");
+        }
     }
     public void  atualiza(double taxa){
-        this.saldo  += this.saldo;
+        if(taxa > 0){
+        this.saldo  += this.saldo * (taxa/100);
+        }else {
+            System.out.println("A taxa deve ser maior que zero");
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "Saldo = " + saldo +
+                '}';
     }
 }
+
 

@@ -1,32 +1,37 @@
 package controller;
 
-import model.*;
+import model.ContaConjunta;
+import model.ContaCorrente;
+import model.ContaPoupanca;
+import model.ContaPoupancaSalario;
 
-public abstract class ContaController {
-    public static void main(String[] args){
-        Conta c1 = new Conta();
-        System.out.println(c1);
+public class ContaController {
 
+
+    public static void main(String[] args) {
         ContaCorrente cc1 = new ContaCorrente();
-        System.out.println(cc1.getSaldo());
-        cc1.deposita(1000.0);
-        cc1.saca(2000);
+        ContaPoupanca cp1 = new ContaPoupanca();
+        ContaConjunta cj1 = new ContaConjunta();
+        ContaPoupancaSalario cps1 = new ContaPoupancaSalario();
+
+        cc1.deposita(1000);
+        System.out.println("Conta Corrente");
+        System.out.println(cc1);
+        cc1.saca(1100);
+        System.out.println(cc1);
+
+        System.out.println();
+        cp1.deposita(2000);
+        System.out.println("Conta Poupança");
+        System.out.println(cp1);
         System.out.println();
 
-        ContaPoupanca cp1 = new ContaPoupanca();
-        System.out.println(cp1.getSaldo());
-        cp1.deposita(1000.0);
-        System.out.println(cp1.getSaldo());
-        cp1.saca(500);
-        System.out.println(cp1.getSaldo());
+        cj1.deposita(5000);
+        System.out.println("Conta Conjunta");
+        System.out.println(cj1);
+        System.out.println();
 
-        ContaConjunta ccj1 = new ContaConjunta();
-        System.out.println(ccj1.getSaldo());
-        ccj1.deposita(1000.0);
-
-        ContaPoupancaSalario cps1 = new ContaPoupancaSalario();
-        System.out.println(cps1.getSaldo());
-        cps1.deposita(1000.0);
-
-    }
-}
+        cps1.deposita(7000);
+        System.out.println("Conta Poupança Salario");
+        System.out.println(cps1);
+    }}
