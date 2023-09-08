@@ -16,7 +16,7 @@ public class ProdutoController {
 
 }
 class Produto{
-    String nome;
+    String Arroz;
     double valor;
     int estoque;
 }
