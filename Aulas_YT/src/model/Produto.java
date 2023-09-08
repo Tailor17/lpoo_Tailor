@@ -40,4 +40,13 @@ public class Produto {
             this.estoque = estoque;
         }
     }
+
+    @Override
+    public String toString() {
+        return "\nProduto{" +
+                "nome='" + nome + '\'' +
+                ", valor=" + valor +
+                ", estoque=" + estoque +
+                '}';
+    }
 }
